@@ -1,0 +1,14 @@
+<div class="container">
+  <hot-table
+    [data]="items"
+    [columns]="columns"
+    [col-headers]="headers"
+  ></hot-table>
+
+  <button (click)="isTotalInformation()" type="button" style="margin: 20px">Show summary</button>
+
+  <p *ngIf="totalInformation">
+    The sum is: <b>{{totalSum}}</b>.
+    The cheapest product is <b>{{cheapestName?.name}}</b> and the most expensive is <b>{{largestName?.name}}</b>
+  </p>
+</div>
